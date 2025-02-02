@@ -15,6 +15,11 @@
   outputs = { self, nixpkgs, rust-overlay, flake-utils, crane, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
+
+        pkgsUnstable = import nixpkgs {
+          inherit system;
+        };
+        
         overlays = [ (import rust-overlay) ];
         pkgs = import nixpkgs {
           inherit system overlays;
@@ -63,7 +68,7 @@
               sqlite 
               sqlx-cli 
               cargo-leptos
-              spin
+              pkgsUnstable.fermyon-spin
               gcc
               gnumake
             ];
