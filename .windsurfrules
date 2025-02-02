@@ -1,0 +1,27 @@
+I'm working on my-leptos-app. Here are the key documents to help you understand the current state and context:
+
+This is a Leptos web application that runs on Fermyon Spin using the WASM target. The project is currently in its initial setup phase.
+
+1. Current Status & Priorities:
+- Project setup with Nix development environment
+- Leptos framework integration with Fermyon Spin
+- WASM target configuration
+
+2. Key Technical Components:
+- Rust with wasm32-wasip1 target
+- Fermyon Spin v3 for serverless WASM
+- Leptos framework for frontend
+- Nix for development environment management
+
+3. Main Implementation Directories:
+- `/src`: Main application source code
+- `/style`: Styling assets
+- `spin.toml`: Spin configuration
+- `Cargo.toml`: Rust dependencies
+- `flake.nix`: Nix development environment
+
+Based on the current status, suggested next steps:
+1. Review and document the application architecture
+2. Set up initial routing and components
+3. Implement core application features
+4. Add styling and UI components
