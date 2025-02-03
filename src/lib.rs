@@ -1,4 +1,8 @@
 mod app;
+mod components;
+
+pub use app::*;
+pub use components::*;
 
 #[cfg(feature = "ssr")]
 mod server;

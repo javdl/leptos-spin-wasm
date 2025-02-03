@@ -1,7 +1,7 @@
-use components::{Route, Router, Routes};
+use crate::components::button::{Button, ButtonVariant};
 use leptos::{prelude::*, task::spawn_local};
 use leptos_meta::*;
-use leptos_router::*;
+use leptos_router::{*, components::*};
 
 #[cfg(feature = "ssr")]
 pub fn shell(options: LeptosOptions) -> impl IntoView {
@@ -51,12 +51,12 @@ pub fn App() -> impl IntoView {
 fn HomePage() -> impl IntoView {
     // Creates a reactive value to update the button
     let (count, set_count) = signal(0);
-    let on_click = move |_| {
+    let on_click = Box::new(move |_| {
         set_count.update(|count| *count += 1);
         spawn_local(async move {
             save_count(count.get()).await.unwrap();
         });
-    };
+    });
 
     let hearts = move || "\u{2764}".repeat(count.get() as usize);
 
@@ -64,12 +64,12 @@ fn HomePage() -> impl IntoView {
         <div class="container mx-auto p-4">
             <div class="text-center">
                 <h1 class="text-pink-500">{"\u{2764}"} Hallo Maartje Groenestein {"\u{2764}"}</h1>
-                <button 
-                    on:click=on_click
-                    class="text-lg px-5 py-2.5 mt-5 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors"
+                <Button
+                    variant=ButtonVariant::Default
+                    on_click=on_click
                 >
-                    "Click Me: " {count} " " {hearts}
-                </button>
+                    {move || view! { <>"Click Me: " {count} " " {hearts()}</>}}
+                </Button>
             </div>
             <div class="mt-5 flex justify-around">
                 <div class="text-center">
