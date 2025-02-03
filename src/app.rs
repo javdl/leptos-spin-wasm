@@ -61,30 +61,32 @@ fn HomePage() -> impl IntoView {
     let hearts = move || "\u{2764}".repeat(count.get() as usize);
 
     view! {
-        <div>
-            <h1 style="color: #ff1493;">{"\u{2764}"} Hallo Maartje Groenestein {"\u{2764}"}</h1>
-            <button 
-                on:click=on_click
-                style="font-size: 1.2em; padding: 10px 20px; margin-top: 20px;"
-            >
-                "Click Me: " {count} " " {hearts}
-            </button>
-            <div style="margin-top: 20px; display: flex; justify-content: space-around;">
-                <div style="text-align: center;">
+        <div class="container mx-auto p-4">
+            <div class="text-center">
+                <h1 class="text-pink-500">{"\u{2764}"} Hallo Maartje Groenestein {"\u{2764}"}</h1>
+                <button 
+                    on:click=on_click
+                    class="text-lg px-5 py-2.5 mt-5 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition-colors"
+                >
+                    "Click Me: " {count} " " {hearts}
+                </button>
+            </div>
+            <div class="mt-5 flex justify-around">
+                <div class="text-center">
                     <img 
                         src="/images/mats.gif"
                         alt="Dancing child Mats"
-                        style="width: 100%; max-width: 300px; height: auto;"
+                        class="w-full max-w-[300px] h-auto"
                     />
-                    <h2 style="margin-top: 10px; color: #ff1493;">Mats</h2>
+                    <h2 class="mt-2.5 text-pink-500">Mats</h2>
                 </div>
-                <div style="text-align: center;">
+                <div class="text-center">
                     <img 
                         src="/images/floris.gif"
                         alt="Dancing child Floris"
-                        style="width: 100%; max-width: 300px; height: auto;"
+                        class="w-full max-w-[300px] h-auto"
                     />
-                    <h2 style="margin-top: 10px; color: #ff1493;">Floris</h2>
+                    <h2 class="mt-2.5 text-pink-500">Floris</h2>
                 </div>
             </div>
         </div>

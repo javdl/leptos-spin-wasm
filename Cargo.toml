@@ -36,8 +36,8 @@ ssr = [
 
 [package.metadata.leptos]
 output-name = "my_leptos_app"
-style-file = "style/main.scss"
 bin-features = ["ssr"]
 bin-default-features = false
 lib-features = ["hydrate"]
 lib-default-features = false
+tailwind-input-file = "style/tailwind.css"
