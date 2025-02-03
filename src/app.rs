@@ -58,9 +58,36 @@ fn HomePage() -> impl IntoView {
         });
     };
 
+    let hearts = move || "\u{2764}".repeat(count.get() as usize);
+
     view! {
-      <h1>"Welcome to Leptos - served from Spin!"</h1>
-      <button on:click=on_click>"Click Me: " {count}</button>
+        <div>
+            <h1 style="color: #ff1493;">{"\u{2764}"} Hallo Maartje Groenestein {"\u{2764}"}</h1>
+            <button 
+                on:click=on_click
+                style="font-size: 1.2em; padding: 10px 20px; margin-top: 20px;"
+            >
+                "Click Me: " {count} " " {hearts}
+            </button>
+            <div style="margin-top: 20px; display: flex; justify-content: space-around;">
+                <div style="text-align: center;">
+                    <img 
+                        src="/images/mats.gif"
+                        alt="Dancing child Mats"
+                        style="width: 100%; max-width: 300px; height: auto;"
+                    />
+                    <h2 style="margin-top: 10px; color: #ff1493;">Mats</h2>
+                </div>
+                <div style="text-align: center;">
+                    <img 
+                        src="/images/floris.gif"
+                        alt="Dancing child Floris"
+                        style="width: 100%; max-width: 300px; height: auto;"
+                    />
+                    <h2 style="margin-top: 10px; color: #ff1493;">Floris</h2>
+                </div>
+            </div>
+        </div>
     }
 }
 

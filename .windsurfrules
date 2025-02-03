@@ -20,6 +20,9 @@ This is a Leptos web application that runs on Fermyon Spin using the WASM target
 - `Cargo.toml`: Rust dependencies
 - `flake.nix`: Nix development environment
 
+4. commands
+- `nix develop --command spin build --up` - build and run the application
+
 Based on the current status, suggested next steps:
 1. Review and document the application architecture
 2. Set up initial routing and components
