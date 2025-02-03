@@ -2,6 +2,7 @@ use crate::components::button::{Button, ButtonVariant};
 use leptos::{prelude::*, task::spawn_local};
 use leptos_meta::*;
 use leptos_router::{*, components::*};
+use crate::pages::styleguide::StyleguidePage;
 
 #[cfg(feature = "ssr")]
 pub fn shell(options: LeptosOptions) -> impl IntoView {
@@ -39,6 +40,7 @@ pub fn App() -> impl IntoView {
             <main>
                 <Routes fallback>
                     <Route path=path!("") view=HomePage/>
+                    <Route path=path!("styleguide") view=StyleguidePage/>
                     <Route path=path!("/*any") view=NotFound/>
                 </Routes>
             </main>
