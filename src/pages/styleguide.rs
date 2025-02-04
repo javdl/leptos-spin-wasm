@@ -1,5 +1,7 @@
 use leptos::{prelude::*, html::ElementChild};
-use crate::components::button::{Button, ButtonVariant};
+// use crate::components::button::{Button, ButtonVariant};
+use crate::components::ui::badge::{Badge, BadgeVariant};
+
 
 #[component]
 pub fn StyleguidePage() -> impl IntoView {
