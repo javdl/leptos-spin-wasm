@@ -3,17 +3,20 @@ I'm working on my-leptos-app. Here are the key documents to help you understand 
 This is a Leptos web application that runs on Fermyon Spin using the WASM target. The project is currently in its initial setup phase.
 
 1. Current Status & Priorities:
+
 - Project setup with Nix development environment
 - Leptos framework integration with Fermyon Spin
 - WASM target configuration
 
 2. Key Technical Components:
+
 - Rust with wasm32-wasip1 target
 - Fermyon Spin v3 for serverless WASM
 - Leptos framework for frontend
 - Nix for development environment management
 
 3. Main Implementation Directories:
+
 - `/src`: Main application source code
 - `/style`: Styling assets
 - `spin.toml`: Spin configuration
@@ -21,9 +24,34 @@ This is a Leptos web application that runs on Fermyon Spin using the WASM target
 - `flake.nix`: Nix development environment
 
 4. commands
+
 - `nix develop --command spin build --up` - build and run the application
 
+Functions:
+
+- CRUD API in Axum
+- the API stores whisky in a database (Sqlite)
+- It uses SQLx for database access
+- The data fields contain an ID, a name, a description, a category, a distillery, a botteler, a year, a volume and a price.
+- Example of 1 item:
+
+```text
+Glenmorangie 15-year-old
+Whiskybase ID
+1231234
+Category: Single Malt
+Distillery: Glenmorangie
+Bottler: Distillery Bottling
+Bottling serie: The Lasanta
+Stated Age: 15 years old
+Cask Type: Bourbon & Sherry
+Strength: 43.0 % Vol.
+Size: 700 ml
+Added on: 11 feb 2025 4:33 pm by Ad1
+```
+
 Based on the current status, suggested next steps:
+
 1. Review and document the application architecture
 2. Set up initial routing and components
 3. Implement core application features

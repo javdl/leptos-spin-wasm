@@ -71,6 +71,7 @@
               pkgsUnstable.fermyon-spin
               gcc
               gnumake
+              nodejs_22
             ];
 
           # Environment variables
