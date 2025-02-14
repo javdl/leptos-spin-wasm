@@ -1,6 +1,5 @@
 use leptos::{prelude::*, html::ElementChild};
 use crate::components::button::{Button, ButtonVariant};
-use crate::components::ui::badge::{Badge, BadgeVariant};
 
 #[component]
 pub fn StyleguidePage() -> impl IntoView {
@@ -97,10 +96,6 @@ pub fn StyleguidePage() -> impl IntoView {
             <section class="mb-12">
                 <h2 class="text-2xl font-semibold mb-4">"Badges"</h2>
                 <div class="flex flex-wrap gap-4">
-                    <Badge variant=BadgeVariant::Default>"Default Badge"</Badge>
-                    <Badge variant=BadgeVariant::Secondary>"Secondary Badge"</Badge>
-                    <Badge variant=BadgeVariant::Destructive>"Destructive Badge"</Badge>
-                    <Badge variant=BadgeVariant::Outline>"Outline Badge"</Badge>
                 </div>
             </section>
         </div>
