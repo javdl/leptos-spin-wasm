@@ -65,3 +65,18 @@
     --ring: 212.7 26.8% 83.9%;
   }
 }
+
+@layer components {
+  .fade-in {
+    @apply animate-fade-in;
+  }
+  .fade-out {
+    @apply animate-fade-out;
+  }
+  .slide-in {
+    @apply animate-slide-in;
+  }
+  .slide-out {
+    @apply animate-slide-out;
+  }
+}
