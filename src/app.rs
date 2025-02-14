@@ -37,7 +37,7 @@ pub fn App() -> impl IntoView {
         <Title text="Welcome to Leptos X Spin!"/>
 
         <Router>
-            <main>
+            <main class="fade-in">
                 <Routes fallback>
                     <Route path=path!("") view=HomePage/>
                     <Route path=path!("styleguide") view=StyleguidePage/>
@@ -63,7 +63,7 @@ fn HomePage() -> impl IntoView {
     let hearts = move || "\u{2764}".repeat(count.get() as usize);
 
     view! {
-        <div class="container mx-auto p-4">
+        <div class="container mx-auto p-4 slide-in">
             <div class="text-center">
                 <h1 class="text-pink-500">{"\u{2764}"} Hallo Maartje Groenestein {"\u{2764}"}</h1>
                 <Button
