@@ -10,6 +10,7 @@ use wasi::exports::http::incoming_handler::Guest;
 use wasi::http::proxy::export;
 
 use crate::app::{shell, App, SaveCount};
+use crate::markdown_renderer::handle_markdown_request;
 
 struct LeptosServer;
 
@@ -38,6 +39,12 @@ async fn handle_request(
 
     let conf = get_configuration(None).unwrap();
     let leptos_options = conf.leptos_options;
+
+    if request.uri().path().starts_with("/markdown/") {
+        let response = handle_markdown_request(request).await?;
+        response_out.set(response);
+        return Ok(());
+    }
 
     Handler::build(request, response_out)?
         // NOTE: Add all server functions here to ensure functionality works as expected!
