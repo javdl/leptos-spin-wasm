@@ -10,3 +10,7 @@ Build and run:
 
 - `nix develop`
 - `spin up --build` to build and run the server. It will print the application URL.
+
+Rendering markdown pages:
+
+- To render a markdown page, send a POST request to the `/markdown` endpoint with the markdown content in the request body.
