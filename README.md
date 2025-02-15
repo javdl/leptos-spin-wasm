@@ -8,4 +8,5 @@ Prequisites:
 
 Build and run:
 
+- `nix develop`
 - `spin up --build` to build and run the server. It will print the application URL.
