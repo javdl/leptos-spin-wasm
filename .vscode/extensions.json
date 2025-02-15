@@ -6,6 +6,7 @@
     "vadimcn.vscode-lldb",
     "usernamehw.errorlens",
     "streetsidesoftware.code-spell-checker",
-    "bradlc.vscode-tailwindcss"
+    "bradlc.vscode-tailwindcss",
+    "saoudrizwan.claude-dev"
   ]
 }
