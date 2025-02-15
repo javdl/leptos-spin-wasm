@@ -1,0 +1,5 @@
+ARG SPIN_VERSION="v3.1.2"
+RUN mkdir -p /opt/spin && \
+    cd /opt/spin && \
+    curl -fsSL https://developer.fermyon.com/downloads/install.sh | bash -s -- -v $SPIN_VERSION && \
+    ln -s /opt/spin/spin /usr/local/bin/spin
