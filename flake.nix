@@ -72,6 +72,9 @@
               gcc
               gnumake
               nodejs_22
+              binaryen
+              tailwindcss
+              direnv
             ];
 
           # Environment variables
