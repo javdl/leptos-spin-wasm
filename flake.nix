@@ -26,7 +26,7 @@
         };
         
         # Latest nightly Rust
-        rustToolchain = pkgs.rust-bin.nightly.latest.default.override {
+        rustToolchain = pkgs.rust-bin.stable.latest.default.override {
           extensions = [ "rust-src" "rust-analyzer" "clippy" ];
           targets = [ "wasm32-wasip1" "wasm32-unknown-unknown" ];
         };
